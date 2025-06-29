@@ -1,11 +1,11 @@
 <script setup>
-import TENOR_API_KEY from '@/API_KEYS'
 import axios from 'axios'
 import { ref } from 'vue'
 
 const clientkey = 'my_test_app'
 const limit = 16
 const search_term = ref('')
+const TENOR_API_KEY = import.meta.env.VITE_TENOR_API_KEY
 
 const gif_results = ref({
   results: [

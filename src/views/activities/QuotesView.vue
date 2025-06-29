@@ -11,13 +11,14 @@ const quote = ref({
 })
 const hasPressed = ref(false)
 const isLoading = ref(false)
+const QUOTES_API_KEY = String(import.meta.env.VITE_QUOTES_API_KEY)
 
 const getQuote = () => {
   isLoading.value = true
   axios
     .get('https://quotes15.p.rapidapi.com/quotes/random/', {
       headers: {
-        'x-rapidapi-key': '8392e85394mshb7835a3d63c8ae3p1dcee8jsn94079e1406a0',
+        'x-rapidapi-key': QUOTES_API_KEY,
       },
     })
     .then((response) => {
