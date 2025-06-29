@@ -23,34 +23,36 @@ setInterval(() => {
 }, 1000)
 </script>
 <template>
-  <section class="m-10 mx-20">
-    <div class="bg-gradient-to-r from-purple-300 to-purple-600 p-5 rounded-3xl shadow-lg">
-      <div class="flex flex-col mb-10 font-bold text-xl md:text-3xl lg:text-4xl">
-        <div class="text-center text-white mt-10">
-          {{ current_time.day }}, {{ current_time.date }} {{ current_time.month }}
-          {{ current_time.year }}
-        </div>
-        <div class="flex flex-row items-center justify-evenly mt-10 mb-5">
+  <section
+    class="py-6 md:py-10 px-1 md:px-4 bg-gradient-to-r from-yellow-300 to-rose-600 rounded-b-3xl"
+  >
+    <div class="text-white">
+      <div class="flex flex-col gap-5 items-center font-bold text-xl md:text-3xl lg:text-5xl">
+        <div class="flex flex-row w-11/12 md:w-5/6 items-center justify-evenly">
           <div
-            class="flex flex-col justify-center items-center bg-white rounded-lg shadow-lg h-32 md:h-48 lg:h-48 w-32 md:w-48 lg:w-48"
+            class="flex flex-col justify-center items-center rounded-xl shadow-2xl h-32 md:h-48 lg:h-48 w-32 md:w-48 lg:w-48"
           >
             <div>{{ current_time.hours }}</div>
-            <h1 class="text-sm mt-2">HOURS</h1>
+            <h1 class="text-sm">HOURS</h1>
           </div>
-          <div><h1 class="text-white">:</h1></div>
+          <div><h1 class="">:</h1></div>
           <div
-            class="flex flex-col justify-center items-center bg-white rounded-lg shadow-lg h-32 md:h-48 lg:h-48 w-32 md:w-48 lg:w-48"
+            class="flex flex-col justify-center items-center rounded-xl shadow-2xl h-32 md:h-48 lg:h-48 w-32 md:w-48 lg:w-48"
           >
             <div>{{ current_time.minutes }}</div>
-            <h1 class="text-sm mt-2">MINUTES</h1>
+            <h1 class="text-sm">MINUTES</h1>
           </div>
-          <div class="text-white"><h1>:</h1></div>
+          <div class=""><h1>:</h1></div>
           <div
-            class="flex flex-col justify-center items-center bg-white rounded-lg shadow-lg h-32 md:h-48 lg:h-48 w-32 md:w-48 lg:w-48"
+            class="flex flex-col justify-center items-center rounded-xl shadow-2xl h-32 md:h-48 lg:h-48 w-32 md:w-48 lg:w-48"
           >
             <div>{{ current_time.seconds }}</div>
-            <h1 class="text-sm mt-2">SECONDS</h1>
+            <h1 class="text-sm">SECONDS</h1>
           </div>
+        </div>
+        <div class="text-center text-xl md:text-2xl lg:text-3xl">
+          {{ current_time.day }}, {{ current_time.date }} {{ current_time.month }}
+          {{ current_time.year }}
         </div>
       </div>
     </div>

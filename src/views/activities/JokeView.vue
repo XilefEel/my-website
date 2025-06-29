@@ -29,25 +29,25 @@ const getJoke = () => {
 
 <template>
   <section
-    class="flex flex-col justify-center text-center items-center bg-gradient-to-tr from-yellow-400 to-red-400"
+    class="flex flex-col text-center items-center bg-gradient-to-tr from-yellow-400 to-red-400"
   >
-    <div class="m-10 mb-20">
-      <div class="my-5 text-5xl font-bold">
+    <div class="container flex flex-col items-center">
+      <div class="my-5 text-3xl md:text-4xl lg:text-5xl font-bold">
         <h1>Joke Generator</h1>
       </div>
-      <div class="block p-10 pb-20 w-[600px] bg-black rounded-lg shadow-lg">
-        <div class="flex flex-col justify-center items-center">
-          <div class="w-40 h-40 mx-auto my-2">
+      <div class="block p-10 md:w-2/3 bg-black rounded-lg shadow-lg">
+        <div class="flex flex-col justify-center items-center md:text-xl">
+          <div class="size-40 mx-auto my-2">
             <img :src="laughing_emoji" alt="Laughing Emoji" />
           </div>
-          <div v-if="!isLoading" class="text-white text-xl m-5 my-16 h-44 space-y-2">
+          <div v-if="!isLoading" class="text-white m-5 my-16 h-44 space-y-2">
             <h1>{{ jokes.setup }}</h1>
             <h1>{{ jokes.punchline }}</h1>
           </div>
-          <div v-else class="text-white text-xl m-5 my-16 h-44 space-y-2">
+          <div v-else class="text-white m-5 my-16 h-44 space-y-2">
             <h1>Fetching hilarious joke...</h1>
           </div>
-          <div class="w-full h-16">
+          <div class="w-2/3 h-auto">
             <div class="text-white mb-2">
               <p v-if="hasPressed">Not funny?</p>
             </div>

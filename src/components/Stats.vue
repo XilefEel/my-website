@@ -18,7 +18,6 @@ const statistics = [
   { name: 'Languages Spoken', value: 3 },
   { name: 'Hackathons Participated', value: 4 },
   { name: 'Open Source Contributions', value: 15 },
-  { name: 'Workshops Conducted', value: 2 },
 ]
 
 const getSkillLevelColor = (level) => {
@@ -28,15 +27,15 @@ const getSkillLevelColor = (level) => {
 }
 </script>
 <template>
-  <section class="py-12 px-16 bg-gray-100">
-    <h1 class="text-3xl font-bold mb-6 ml-10">My Skills</h1>
+  <section class="py-12 px-4 sm:px-16 bg-gray-100 rounded-t-3xl">
+    <h1 class="text-2xl sm:text-3xl font-bold mb-6 ml-10">My Skills</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div
         v-for="skill in skills"
         :key="skill.name"
         class="bg-blue-100 p-4 py-8 rounded-lg shadow-md"
       >
-        <h2 class="text-xl font-bold">{{ skill.name }}</h2>
+        <h2 class="text-lg sm:text-xl font-bold">{{ skill.name }}</h2>
         <div class="mt-2">
           <div class="bg-blue-200 h-4 rounded-full">
             <div
@@ -50,14 +49,14 @@ const getSkillLevelColor = (level) => {
       </div>
     </div>
     <div class="mt-16">
-      <h1 class="text-3xl font-bold mb-6 m-10">My Statistics</h1>
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center text-xl">
+      <h1 class="text-2xl sm:text-3xl font-bold mb-6 m-10">My Statistics</h1>
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
         <div
           v-for="statistic in statistics"
           :key="statistic.name"
           class="bg-purple-100 p-4 py-8 rounded-lg shadow-md"
         >
-          <h2 class="font-bold">{{ statistic.name }}</h2>
+          <h2 class="font-bold text-lg sm:text-xl">{{ statistic.name }}</h2>
           <div class="mt-2">
             <p class="mt-1 text-gray-600">{{ statistic.value }}</p>
           </div>

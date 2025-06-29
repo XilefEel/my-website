@@ -10,10 +10,10 @@ import Activites from '@/components/Activites.vue'
 
 <template>
   <Hero title="I'm Felix Lee" subtitle="World's No. 1 Programmer" />
+  <DigitalClock />
   <AboutMe />
   <Stats />
   <Projects />
   <Activites />
-  <Logo />
-  <DigitalClock />
+  <!-- <Logo /> -->
 </template>

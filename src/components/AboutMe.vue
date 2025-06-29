@@ -4,7 +4,7 @@ import ProfileCard from './ProfileCard.vue'
 </script>
 
 <template>
-  <section class="py-12 px-16">
+  <section class="py-12 md:px-16">
     <div class="flex flex-col md:flex-row items-center justify-center">
       <div>
         <img
@@ -15,8 +15,8 @@ import ProfileCard from './ProfileCard.vue'
       </div>
       <div class="px-10 md:w-1/2 mt-4 md:mt-0">
         <div class="flex flex-col gap-6">
-          <h2 class="text-2xl font-bold text-blue-500">About Me</h2>
-          <p class="text-justify">
+          <h2 class="text-xl sm:text-2xl font-bold text-blue-500">About Me</h2>
+          <p class="text-justify text-sm sm:text-base">
             Hello! I'm Felix Lee, a passionate programmer with a love for coding and technology. I
             enjoy creating innovative solutions and exploring new programming languages and
             frameworks. In my free time, I like to contribute to open-source projects and learn

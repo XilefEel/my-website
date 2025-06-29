@@ -11,12 +11,14 @@ defineProps({
 })
 </script>
 <template>
-  <section class="py-12 mx-20">
+  <section class="py-8 mx-10 md:mx-20">
     <div class="text-center my-10 font-bold space-y-4">
-      <h1 class="text-5xl text-blue-500">Fun Activities</h1>
-      <p class="text-xl text-gray-700">
-        Explore a variety of fun activities to enhance your learning experience.
-      </p>
+      <div class="text-center">
+        <h1 class="text-2xl md:text-4xl text-blue-500 font-extrabold">Activities</h1>
+        <h1 class="text-lg md:text-xl font-extrabold mt-3">
+          Explore a variety of fun activities to enhance your learning experience.
+        </h1>
+      </div>
     </div>
     <div class="text-center text-xl my-10 font-bold">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
