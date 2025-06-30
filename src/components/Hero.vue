@@ -18,7 +18,7 @@ defineProps({
   <section class="bg-gradient-to-t from-blue-400 to-blue-600 p-10 py-16">
     <div class="flex flex-row items-center justify-evenly">
       <div class="text-left text-white">
-        <h1 class="flex flex-wrap text-3xl md:text-6xl font-extrabold">{{ title }}</h1>
+        <h1 class="flex flex-wrap text-3xl font-extrabold md:text-6xl">{{ title }}</h1>
         <p class="text-sm md:text-xl">{{ subtitle }}</p>
       </div>
       <div>

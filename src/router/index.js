@@ -7,6 +7,8 @@ import DictionaryView from '@/views/activities/DictionaryView.vue'
 import QuoteView from '@/views/activities/QuotesView.vue'
 import GifSearchView from '@/views/activities/GifSearchView.vue'
 import ToDoSearchView from '@/views/activities/ToDoListView.vue'
+import CalculatorView from '@/views/activities/CalculatorView.vue'
+import Game2048View from '@/views/activities/Game2048View.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,6 +52,16 @@ const router = createRouter({
       path: '/activities/todo',
       name: 'todo',
       component: ToDoSearchView,
+    },
+    {
+      path: '/activities/calculator',
+      name: 'calculator',
+      component: CalculatorView,
+    },
+    {
+      path: '/activities/2048-game',
+      name: '2048',
+      component: Game2048View,
     },
   ],
 })

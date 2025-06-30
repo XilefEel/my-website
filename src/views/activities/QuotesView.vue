@@ -36,19 +36,19 @@ const getQuote = () => {
 
 <template>
   <section
-    class="flex flex-col justify-center text-center items-center bg-gradient-to-tr from-red-500 to-rose-400"
+    class="flex min-h-screen flex-col items-center justify-center bg-gradient-to-tr from-red-500 to-rose-400 text-center"
   >
-    <div class="container flex flex-col items-center pt-5 pb-10">
-      <div class="my-5 text-3xl md:text-4xl lg:text-5xl text-white font-bold">
+    <div class="container flex flex-col items-center pb-10 pt-5">
+      <div class="my-5 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
         <h1>Quote Generator</h1>
       </div>
-      <div class="block pt-5 px-5 sm:px-10 pb-20 md:w-3/4 bg-white rounded-lg shadow-lg">
-        <div class="flex flex-col justify-center items-center">
-          <div v-if="!isLoading" class="text-red-500 text-lg md:text-xl lg:text-2xl m-5 mb-12">
+      <div class="block rounded-lg bg-white px-5 pb-20 pt-5 shadow-lg sm:px-10 md:w-3/4">
+        <div class="flex flex-col items-center justify-center">
+          <div v-if="!isLoading" class="m-5 mb-12 text-lg text-red-500 md:text-xl lg:text-2xl">
             <h1 v-if="!hasPressed" class="text-base md:text-lg lg:text-xl">
               Press the button to get a inspiring quote!
             </h1>
-            <div class="flex flex-row justify-between items-center text-base md:text-lg lg:text-xl">
+            <div class="flex flex-row items-center justify-between text-base md:text-lg lg:text-xl">
               <img
                 v-if="hasPressed"
                 :src="quotations"
@@ -60,23 +60,23 @@ const getQuote = () => {
                 v-if="hasPressed"
                 :src="quotations"
                 alt="Quotations"
-                class="hidden sm:block sm:h-12 rotate-180"
+                class="hidden rotate-180 sm:block sm:h-12"
               />
             </div>
-            <div class="text-base text-right text-black mt-6">
+            <div class="mt-6 text-right text-base text-black">
               <h1>{{ quote.originator.name }}</h1>
             </div>
           </div>
-          <div v-else class="text-red-500 text-base md:text-lg lg:text-xl m-5 mb-12 space-y-2">
+          <div v-else class="m-5 mb-12 space-y-2 text-base text-red-500 md:text-lg lg:text-xl">
             <h1>Fetching inspiring quote...</h1>
           </div>
-          <div class="w-full h-16">
-            <div class="text-red-500 mb-2 text-base md:text-lg lg:text-xl">
+          <div class="h-16 w-full">
+            <div class="mb-2 text-base text-red-500 md:text-lg lg:text-xl">
               <p v-if="hasPressed">Not inspired enough?</p>
             </div>
             <button
               @click="getQuote"
-              class="text-black block bg-red-400 rounded-md text-center text-base md:text-lg lg:text-xl h-full w-full p-4 shadow-lg hover:bg-gray-400"
+              class="block h-full w-full rounded-md bg-red-400 p-4 text-center text-base text-black shadow-lg hover:bg-gray-400 md:text-lg lg:text-xl"
             >
               Get a new quote
             </button>

@@ -5,17 +5,17 @@ import tailwind_css_logo from '@/assets/images/logo/tailwind_css_logo.png'
 
 <template>
   <section class="py-12">
-    <div class="container-xl lg:container m-auto text-gray-700">
-      <h1 class="text-center text-2xl font-bold mb-4">Powered By</h1>
+    <div class="container-xl m-auto text-gray-700 lg:container">
+      <h1 class="mb-4 text-center text-2xl font-bold">Powered By</h1>
       <div class="flex justify-center">
         <div>
-          <img :src="vue_js_logo" alt="Vue.js Logo" class="h-16 md:h-24 lg:h-32 px-28" />
-          <h1 class="text-center text-xl mt-4">Vue Js</h1>
+          <img :src="vue_js_logo" alt="Vue.js Logo" class="h-16 px-28 md:h-24 lg:h-32" />
+          <h1 class="mt-4 text-center text-xl">Vue Js</h1>
         </div>
-        <h1 class="mt-auto mb-auto text-center text-3xl font-extrabold">+</h1>
+        <h1 class="mb-auto mt-auto text-center text-3xl font-extrabold">+</h1>
         <div>
-          <img :src="tailwind_css_logo" alt="Vue.js Logo" class="h-16 md:h-24 lg:h-32 px-20" />
-          <h1 class="text-center text-xl mt-4">Tailwind CSS</h1>
+          <img :src="tailwind_css_logo" alt="Vue.js Logo" class="h-16 px-20 md:h-24 lg:h-32" />
+          <h1 class="mt-4 text-center text-xl">Tailwind CSS</h1>
         </div>
       </div>
     </div>

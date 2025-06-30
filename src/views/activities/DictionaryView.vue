@@ -41,25 +41,27 @@ const getDefinition = () => {
 }
 </script>
 <template>
-  <section class="flex flex-col justify-center bg-gradient-to-tr from-purple-500 to-pink-300">
+  <section
+    class="flex min-h-screen flex-col justify-center bg-gradient-to-tr from-purple-500 to-pink-300"
+  >
     <div class="my-10">
-      <div class="my-1 mt-5 text-center text-white text-3xl md:text-4xl lg:text-5xl font-bold">
+      <div class="my-1 mt-5 text-center text-3xl font-bold text-white md:text-4xl lg:text-5xl">
         <h1>Dictionary</h1>
       </div>
-      <div class="my-1 mb-6 text-center text-white text-lg md:text-xl lg:text-2xl">
+      <div class="my-1 mb-6 text-center text-lg text-white md:text-xl lg:text-2xl">
         <h2>Search for any word</h2>
       </div>
-      <div class="block sm:w-2/3 mx-auto bg-white rounded-lg shadow-lg p-8">
-        <div class="flex flex-col sm:gap-5 sm:flex-row justify-between items-center">
+      <div class="mx-auto block rounded-lg bg-white p-8 shadow-lg sm:w-2/3">
+        <div class="flex flex-col items-center justify-between sm:flex-row sm:gap-5">
           <input
-            class="outline-none border-b-purple-300 border-b-2 w-full p-2"
+            class="w-full border-b-2 border-b-purple-300 p-2 outline-none"
             type="text"
             placeholder="Type the word here..."
             v-model="word"
           />
 
           <button
-            class="mt-5 sm:mt-0 w-1/2 sm:w-1/3 text-white block bg-purple-400 rounded-md text-center text-lg shadow-lg p-3 hover:bg-gray-500"
+            class="mt-5 block w-1/2 rounded-md bg-purple-400 p-3 text-center text-lg text-white shadow-lg hover:bg-gray-500 sm:mt-0 sm:w-1/3"
             @click="getDefinition"
           >
             Search
@@ -69,11 +71,11 @@ const getDefinition = () => {
     </div>
     <div
       v-if="result[0].word"
-      class="block sm:w-5/6 mx-auto mb-20 bg-white rounded-lg shadow-lg p-8"
+      class="mx-auto mb-20 block rounded-lg bg-white p-8 shadow-lg sm:w-5/6"
     >
       <div>
         <div>
-          <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold">
+          <h1 class="text-2xl font-bold md:text-3xl lg:text-4xl">
             {{ result[0].word }}
           </h1>
           <p class="text-gray-500">{{ result[0].phonetics[0].text }}</p>
@@ -82,7 +84,7 @@ const getDefinition = () => {
           <div
             v-for="(partOfSpeech, index) in result[0].meanings"
             :key="index"
-            class="text-base md:text-lg lg:text-xl mt-8"
+            class="mt-8 text-base md:text-lg lg:text-xl"
           >
             <p class="text-gray-500">{{ partOfSpeech.partOfSpeech }}</p>
             <div
@@ -91,7 +93,7 @@ const getDefinition = () => {
                 3 || result[0].meanings[index].definitions.length,
               )"
               :key="index"
-              class="text-base md:text-lg lg:text-xl mt-3"
+              class="mt-3 text-base md:text-lg lg:text-xl"
             >
               <p class="border-l-2 border-gray-300 pl-4">{{ definition.definition }}</p>
             </div>

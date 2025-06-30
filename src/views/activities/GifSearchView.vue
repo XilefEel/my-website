@@ -48,27 +48,27 @@ const copyLink = (link) => {
 }
 </script>
 <template>
-  <section class="bg-gray-900 pt-5 pb-10">
-    <div class="flex flex-col justify-center items-center mb-10">
-      <div class="text-white text-3xl md:text-4xl lg:text-5xl font-bold pb-2 pt-10">
+  <section class="min-h-screen bg-gray-900">
+    <div class="mb-10 flex flex-col items-center justify-center">
+      <div class="pb-2 pt-10 text-3xl font-bold text-white md:text-4xl lg:text-5xl">
         <h1>GIF Search</h1>
       </div>
-      <div class="text-white text-base md:text-lg lg:text-xl font-bold">
+      <div class="text-base font-bold text-white md:text-lg lg:text-xl">
         <h1>Search for GIFs</h1>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row justify-center items-center gap-5">
+    <div class="flex flex-col items-center justify-center gap-5 md:flex-row">
       <div class="">
         <input
           type="text"
           v-model="search_term"
           placeholder="Search for GIFs"
-          class="outline-none text-sm md:text-base bg-gray-700 border-b-green-400 rounded-lg shadow-lg text-white border-b-2 p-2 px-10"
+          class="rounded-lg border-b-2 border-b-green-400 bg-gray-700 p-2 px-10 text-sm text-white shadow-lg outline-none md:text-base"
         />
       </div>
       <div>
         <button
-          class="text-white block text-sm md:text-base bg-green-400 rounded-md text-center shadow-lg p-2 px-6 hover:bg-gray-500"
+          class="block rounded-md bg-green-400 p-2 px-6 text-center text-sm text-white shadow-lg hover:bg-gray-500 md:text-base"
           @click="searchGif"
         >
           Search
@@ -77,10 +77,10 @@ const copyLink = (link) => {
     </div>
     <div
       v-if="hasSearched"
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-10 py-16"
+      class="grid grid-cols-1 gap-6 px-10 py-16 md:grid-cols-2 lg:grid-cols-4"
     >
       <div v-for="(, index) in gif_results.results" :key="index">
-        <div class="flex bg-gray-700 h-full p-3 rounded-lg shadow-lg flex-col justify-between">
+        <div class="flex h-full flex-col justify-between rounded-lg bg-gray-700 p-3 shadow-lg">
           <div>
             <img
               :src="gif_results.results[index].media_formats.tinygif.url"
@@ -90,7 +90,7 @@ const copyLink = (link) => {
           </div>
           <div class="pt-5">
             <button
-              class="text-white block bg-green-400 rounded-md text-center text-sm md:text-base shadow-lg p-2 px-6 hover:bg-gray-500"
+              class="block rounded-md bg-green-400 p-2 px-6 text-center text-sm text-white shadow-lg hover:bg-gray-500 md:text-base"
               @click="copyLink(gif_results.results[index].media_formats.tinygif.url)"
             >
               Copy Link

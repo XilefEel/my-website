@@ -24,27 +24,27 @@ setInterval(() => {
 </script>
 <template>
   <section
-    class="py-6 md:py-10 px-1 md:px-4 bg-gradient-to-r from-yellow-300 to-rose-600 rounded-b-3xl"
+    class="rounded-b-3xl bg-gradient-to-r from-yellow-300 to-rose-600 px-1 py-6 md:px-4 md:py-10"
   >
     <div class="text-white">
-      <div class="flex flex-col gap-5 items-center font-bold text-xl md:text-3xl lg:text-5xl">
-        <div class="flex flex-row w-11/12 md:w-5/6 items-center justify-evenly">
+      <div class="flex flex-col items-center gap-5 text-xl font-bold md:text-3xl lg:text-5xl">
+        <div class="flex w-11/12 flex-row items-center justify-evenly md:w-5/6">
           <div
-            class="flex flex-col justify-center items-center rounded-xl shadow-2xl h-32 md:h-48 lg:h-48 w-32 md:w-48 lg:w-48"
+            class="flex h-32 w-32 flex-col items-center justify-center rounded-xl shadow-2xl md:h-48 md:w-48 lg:h-48 lg:w-48"
           >
             <div>{{ current_time.hours }}</div>
             <h1 class="text-sm">HOURS</h1>
           </div>
           <div><h1 class="">:</h1></div>
           <div
-            class="flex flex-col justify-center items-center rounded-xl shadow-2xl h-32 md:h-48 lg:h-48 w-32 md:w-48 lg:w-48"
+            class="flex h-32 w-32 flex-col items-center justify-center rounded-xl shadow-2xl md:h-48 md:w-48 lg:h-48 lg:w-48"
           >
             <div>{{ current_time.minutes }}</div>
             <h1 class="text-sm">MINUTES</h1>
           </div>
           <div class=""><h1>:</h1></div>
           <div
-            class="flex flex-col justify-center items-center rounded-xl shadow-2xl h-32 md:h-48 lg:h-48 w-32 md:w-48 lg:w-48"
+            class="flex h-32 w-32 flex-col items-center justify-center rounded-xl shadow-2xl md:h-48 md:w-48 lg:h-48 lg:w-48"
           >
             <div>{{ current_time.seconds }}</div>
             <h1 class="text-sm">SECONDS</h1>

@@ -38,7 +38,7 @@ const activities = [
   },
   {
     id: 6,
-    bg: 'bg-gradient-to-tr from-blue-400 to-green-400',
+    bg: 'bg-gradient-to-tr from-pink-500 to-amber-400',
     title: 'Calculator',
     image: nilou_1,
     link: '/activities/calculator',
